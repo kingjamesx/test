@@ -1,0 +1,32 @@
+1.function rev(arr){
+  let newArr=[];
+  for(i=0;i<arr.length;i++){
+    newArr.unshift(arr[i])
+  }
+  if(newArr.length>10 && newArr.length%2==0 ){
+    let x=newArr.slice(newArr.length/2)
+    let sum=0;
+    let arrDouble=[]
+    for(let i=0;i<x.length;i++){
+      arrDouble.push(x[i]*2)
+      sum+=x[i]
+    }
+    console.log(arrDouble)
+    console.log(sum)
+  }else{
+    console.log(newArr)
+  }
+}
+2.function modify(str){
+   let x=str.trim()
+  if(x.length<4){
+    console.log('error')
+  }else{  
+    console.log(x.toUpperCase().slice(0,4)) 
+  }
+
+}
+3.const today = new Date();
+const yesterday = new Date();
+yesterday.setDate(today.getDate()-1)
+console.log(`${yesterday}`);
